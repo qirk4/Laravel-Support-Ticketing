@@ -87,7 +87,7 @@ resource "aws_instance" "project-iac" {
     volume_type = "gp2"
   }
   tags = {
-    Name        = "SERVER01"
+    Name        = "SERVER02"
     Environment = "LARAVEL"
     OS          = "UBUNTU"
     Managed     = "IAC"

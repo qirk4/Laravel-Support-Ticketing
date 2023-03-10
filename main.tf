@@ -64,7 +64,7 @@ resource "tls_private_key" "example" {
 }
 
 resource "aws_key_pair" "generated_key" {
-  key_name   = lookup(var.awsprops,"keyname")
+  key_name   = lookup(var.awsprops, "keyname")
   public_key = tls_private_key.example.public_key_openssh
 }
 

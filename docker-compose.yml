@@ -46,6 +46,8 @@ services:
       - ./docker/etc/php/fpm/pool.d/www.conf:/etc/php/fpm/pool.d/www.conf
       - ./docker/etc/cron.d/:/etc/cron.d/
       - ./docker/etc/supervisor/conf.d/:/etc/supervisor/conf.d/
+      - .composer.json:/etc/supervisor/conf.d/composer.json
+      - .composer.lock:/etc/supervisor/conf.d/composer.lock
       - ./docker/var/log/php:/var/log/php:cached
       - ./docker/var/log/supervisor:/var/log/supervisor:cached
     healthcheck:
